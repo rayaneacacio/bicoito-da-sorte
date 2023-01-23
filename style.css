@@ -1,0 +1,146 @@
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+  --color-background: linear-gradient(45deg, #190361 0%, #BB00FF 100%);
+  --color-font: #34355B;
+  --color-button: #FF9500;
+}
+
+.hide{
+  display: none;
+}
+
+body{
+  color: var(--color-font);
+  background: var(--color-background);
+
+  width: 100vw;
+  height: 100vh;
+
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+}
+
+main{
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+body, div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div{
+  flex-direction: column;
+  width: 42.8rem;
+  height: 42.4rem;
+}
+
+h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  width: 25.851rem;
+  text-align: center;
+}
+
+p{
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.5rem;
+  margin: 1.4rem 0 2rem 0;
+}
+
+.antesDeAbrirOBiscoito img{
+  cursor: pointer;
+}
+
+.antesDeAbrirOBiscoito img:hover{
+  animation: quebrarBiscoito 0.5s infinite;
+}
+
+.depoisDeAbrirOBiscoito{
+  width: 42.8rem;
+  height: 56.4rem;
+  gap: 1.7rem;
+}
+
+.depoisDeAbrirOBiscoito h1{
+  width: 29.7rem;
+  height: 5.8rem;
+
+  margin-bottom: 10rem;
+}
+
+.sorte{
+  color: #000000;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.4rem;
+  text-align: center;
+
+  width: 29.3rem;
+  height: 10.7rem;
+  background: #E4EDF1;
+
+  box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+  
+  animation: sorte 2s;
+  transform: translateY(-15rem); 
+
+  position: absolute;
+  bottom: 25rem;
+}
+
+button{
+  color: #FFFF;
+  font-family: 'DM sans';
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  width: 17.4rem;
+  height: 5.2rem;
+  background: var(--color-button);
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+button:hover{
+  filter: brightness(0.9);
+}
+
+@keyframes gradient{
+  0%{background-position: 0% 50%;}
+  50%{background-position: 100% 50%;}
+  100%{background-position: 0% 50%;}
+}
+
+@keyframes quebrarBiscoito{
+  0%{transform: translate(1px, 1px) rotate(0deg);}
+  10%{transform: translate(-3px, 3px) rotate(1deg);}
+  20%{transform: translate(2px, -2px) rotate(-1deg);}
+  30%{transform: translate(-2px, -1px) rotate(0deg);}
+  40%{transform: translate(3px, 3px) rotate(-1deg);}
+  50%{transform: translate(-3px, 2px) rotate(1deg);}
+  60%{transform: translate(1px, 3px) rotate(0deg);}
+  70%{transform: translate(-2px, -2px) rotate(-1deg);}
+  80%{transform: translate(3px, 2px) rotate(1deg);}
+  90%{transform: translate(-3px, -3px) rotate(0deg);}
+  100%{transform: translate(1px, -3px) rotate(1deg);}
+}
+
+@keyframes sorte{
+  from{
+    transform: scale(10%) translateY(-10rem);
+  }
+  to{
+    transform: scale(100%) translateY(-15rem);
+  }
+}
